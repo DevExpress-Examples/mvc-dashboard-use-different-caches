@@ -1,0 +1,16 @@
+<script type="text/javascript">
+    function onBeforeRender(sender) {
+        var control = sender.GetDashboardControl();
+        control.registerExtension(new DevExpress.Dashboard.DashboardPanelExtension(control, { dashboardThumbnail: "./Content/DashboardThumbnail/{0}.png" }));
+    }
+</script>
+<button style="margin: 10px" onclick="$.ajax({url: '@Url.Action("Refresh")'})">Reset Cache</button>
+<div style="position: absolute; left: 0; top: 40px; right: 0; bottom: 0; border-top: 1px solid #cfcfcf">
+    @Html.DevExpress().Dashboard(settings => {
+        settings.Name = "Dashboard";
+        settings.Width = Unit.Percentage(100);
+        settings.Height = Unit.Percentage(100);
+        settings.UseNeutralFilterMode = true;
+        settings.ClientSideEvents.BeforeRender = "onBeforeRender";
+    }).GetHtml()
+</div>
