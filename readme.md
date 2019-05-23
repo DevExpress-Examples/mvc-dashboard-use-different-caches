@@ -1,8 +1,8 @@
 _Files to look at:_
 
-- [Index.cshtml](/CS/MvcDashboardUseDifferentCaches/Pages/Index.cshtml) (VB: [Index.cshtml](/VB/MvcDashboardUseDifferentCaches/Pages/Index.cshtml))
-- [HomeController.cs](/CS/MvcDashboardUseDifferentCaches/HomeController.cs) (VB: [HomeController.vb](/VB/MvcDashboardUseDifferentCaches/HomeController.vb))
-- [Startup.cs](/CS/MvcDashboardUseDifferentCaches/Startup.cs) (VB: [Startup.vb](/VB/MvcDashboardUseDifferentCaches/Startup.vb))
+- [Index.cshtml](/CS/MvcDashboardUseDifferentCaches/Views/Home/Index.cshtml) (VB: [Index.cshtml](/VB/MvcDashboardUseDifferentCaches/Views/Home/Index.cshtml))
+- [HomeController.cs](/CS/MvcDashboardUseDifferentCaches/Controllers/HomeController.cs) (VB: [HomeController.vb](/VB/MvcDashboardUseDifferentCaches/Controllers/HomeController.vb))
+- [Global.asax.cs](/CS/MvcDashboardUseDifferentCaches/Global.asax.cs) (VB: [Global.asax.vb](/VB/MvcDashboardUseDifferentCaches/Global.asax.vb))
 - [CacheManager.cs](/CS/MvcDashboardUseDifferentCaches/CacheManager.cs) (VB: [CacheManager.vb](/VB/MvcDashboardUseDifferentCaches/CacheManager.vb))
 
 # How to Reset the Cache Forcedly in MVC Dashboard
