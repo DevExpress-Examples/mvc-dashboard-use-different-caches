@@ -6,7 +6,7 @@
 
 # Dashboard for MVC - How to Reset the Data Source Cache
 
-The following example shows how you can manage the cache in the ASP.NET Web Forms Dashboard control.
+The following example shows how you can manage the cache in the ASP.NET MVC Dashboard control.
 
 To refresh the data source cache **on the server**, pass a unique parameter value to the [DashboardConfigurator.CustomParameters](http://docs.devexpress.com/Dashboard/DevExpress.DashboardWeb.DashboardConfigurator.CustomParameters) event. You can store the unique GUID value within a session as a parameter and update its value in your code when it is necessary to refresh the cache.
 
