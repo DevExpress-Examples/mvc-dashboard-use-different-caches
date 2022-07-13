@@ -3,10 +3,7 @@
         var control = sender.GetDashboardControl();
         control.registerExtension(new DevExpress.Dashboard.DashboardPanelExtension(control, { dashboardThumbnail: "./Content/DashboardThumbnail/{0}.png" }));
     }
-    function onClick() {
-        WebDashboard1.GetDashboardControl().reloadData();
-    }
-    function myfunction() {
+    function reloadOnServer() {
         $.ajax({
             url: '@Url.Action("Refresh")',
             success: function (data) {
@@ -15,7 +12,10 @@
                 // WebDashboard1.GetDashboardControl().refresh( ["chartDashboardItem1", "listBoxDashboardItem1"] );
             }
         })
-     }
+    }
+    function reloadOnClient() {
+        WebDashboard1.GetDashboardControl().reloadData();
+    }
 </script>
 
 <div style="position: absolute; top: 5px; left: 5px">
@@ -23,7 +23,7 @@
         settings.Name = "ButtonServer";
         settings.Text = "Reset Cache (Server)";
         settings.UseSubmitBehavior = false;
-        settings.ClientSideEvents.Click = "myfunction";
+        settings.ClientSideEvents.Click = "reloadOnServer";
     }).GetHtml()
 </div>
 <div style="position: absolute; top: 5px; left: 192px">
@@ -31,7 +31,7 @@
         settings.Name = "ButtonClient";
         settings.UseSubmitBehavior = false;
         settings.Text = "Reset Cache (Client)";
-        settings.ClientSideEvents.Click = "onClick";
+        settings.ClientSideEvents.Click = "reloadOnClient";
     }).GetHtml()
 </div>
 <div style="position: absolute; left: 0; top: 43px; right: 0; bottom: 0; border-top: 1px solid #cfcfcf">
