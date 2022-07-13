@@ -26,7 +26,7 @@ To refresh the data source cache **on the client**, you can call the [DashboardC
 
 ## Documentation
 
-* [Manage an In-Memory Data Cache](https://docs.devexpress.com/Dashboard/400983) for details.
+* [Manage an In-Memory Data Cache](https://docs.devexpress.com/Dashboard/400983)
 
 ## More Examples
 
