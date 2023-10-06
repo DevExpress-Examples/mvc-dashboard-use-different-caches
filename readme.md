@@ -17,7 +17,7 @@ To refresh the data source cache **on the client**, you can call the [DashboardC
 
 ![](reset-cache-buttons.png)
 
-## Files to Look At
+## Files to Review
 
 * [Index.cshtml](/CS/MvcDashboardUseDifferentCaches/Views/Home/Index.cshtml) (VB: [Index.cshtml](/VB/MvcDashboardUseDifferentCaches/Views/Home/Index.cshtml))
 * [HomeController.cs](/CS/MvcDashboardUseDifferentCaches/Controllers/HomeController.cs) (VB: [HomeController.vb](/VB/MvcDashboardUseDifferentCaches/Controllers/HomeController.vb))
