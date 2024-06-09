@@ -30,11 +30,11 @@ namespace MvcDashboardUseDifferentCaches
 
             DashboardConfigurator.Default.SetDataSourceStorage(dataSourceStorage);
 
-            DashboardConfigurator.Default.CustomParameters += Default_CustomParameters;               
+            DashboardConfigurator.Default.DataSourceCacheKeyCreated += Default_DataSourceCacheKeyCreated;               
         }
 
-        private static void Default_CustomParameters(object sender,CustomParametersWebEventArgs e) {
-            e.Parameters.Add(new DashboardParameter("UniqueCacheParam",typeof(Guid),CacheManager.UniqueCacheParam));
+        private static void Default_DataSourceCacheKeyCreated(object sender, DataSourceCacheKeyCreatedEventArgs e) {
+            e.Key.CustomData.Add("SessionId", CacheManager.UniqueCacheParam.ToString());
         }
     }
 }
